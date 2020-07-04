@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Econobuy_Android.Views.VisualizarPedido"
+             BackgroundColor="#fffeb8">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label x:Name="lbMercado"  Text="" FontSize="Large" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <BoxView HeightRequest="1" WidthRequest="100" BackgroundColor="Black"/>
+                    <Label x:Name="lbData"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <BoxView HeightRequest="1" WidthRequest="100" BackgroundColor="Black"/>
+                    <Label Text="Endereço" FontSize="Large" TextColor="Black"/>
+                    <Label x:Name="lbCEP"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbCidade"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbBairro"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbLogradouro"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <BoxView HeightRequest="1" WidthRequest="100" BackgroundColor="Black"/>
+                    <Label Text="Contato" FontSize="Large" TextColor="Black"/>
+                    <Label x:Name="lbEmail"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbTel1"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbTel2"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbStatus"  Text="" FontSize="Medium" TextColor="Black" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbValor"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="lbMsg"  Text="" FontSize="Medium" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <BoxView HeightRequest="1" WidthRequest="100" BackgroundColor="Black"/>
+                    <Label Text="Produtos" FontSize="Large" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <ListView x:Name="ListaItens" HasUnevenRows="True"
+					   Margin="15">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="0,0,0,10">
+                                        <BoxView HeightRequest="1" WidthRequest="100" BackgroundColor="Black"/>
+                                        <Image Source="{Binding img}" HeightRequest="100" HorizontalOptions="Start"></Image>
+                                        <Label Text="{Binding Nome}" TextColor="Black" FontSize="Medium" ></Label>
+                                        <Label Text="{Binding Qtde, StringFormat='Unidades: {0}'}" TextColor="Black"></Label>
+                                        <Label Text="{Binding valor_un, StringFormat='Valor Unidade: R$ {0}'}" TextColor="Black"></Label>
+                                        <Label Text="{Binding valor_total, StringFormat='Valor Total: R$ {0}'}" TextColor="Black"></Label>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

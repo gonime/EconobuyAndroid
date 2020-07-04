@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:behavior="clr-namespace:Econobuy_Android.Repository"
+             mc:Ignorable="d"
+             x:Class="Econobuy_Android.Views.CadastroCliente"
+             BackgroundColor="#fffeb8"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+            <Label Text="Cadastre-se" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Black"/>
+            <ScrollView BackgroundColor="#fffeb8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Entry x:Name="nameEntry" Placeholder="Nome*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="userEntry" Placeholder="Usuário*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="senhaEntry" Placeholder="Senha*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           IsPassword="True"
+                           TextColor="Black"/>
+                    <Entry x:Name="cpfEntry" Placeholder="CPF" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <behavior:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry x:Name="emailEntry" Placeholder="E-mail*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="cepEntry" Placeholder="CEP*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black" Keyboard="Numeric" TextChanged="cepEntry_TextChangedAsync">
+                        <Entry.Behaviors>
+                            <behavior:MaskedBehavior Mask="XXXXX-XXX" />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry x:Name="logradouroEntry" Placeholder="Logradouro*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="numeroEntry" Placeholder="Número*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="complementoEntry" Placeholder="Complemento" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="bairroEntry" Placeholder="Bairro" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="cidadeEntry" Placeholder="Cidade*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="ufEntry" Placeholder="Estado*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black"/>
+                    <Entry x:Name="tel1Entry" Placeholder="Telefone 1*" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <behavior:MaskedBehavior Mask="(XX)XXXXX-XXXX" />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry x:Name="tel2Entry" Placeholder="Telefone 2" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <behavior:MaskedBehavior Mask="(XX)XXXXX-XXXX" />
+                        </Entry.Behaviors>
+                    </Entry>
+                </StackLayout>
+            </ScrollView>
+            <Button x:Name="loginBtn" Text="Cadastrar" TextColor="Black"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#edce00" Clicked="loginBtn_Clicked"/>
+        </StackLayout> 
+  </ContentPage.Content>
+</ContentPage>

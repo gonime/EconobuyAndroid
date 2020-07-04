@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Econobuy_Android.Views.HomeDetail"
+             BackgroundColor="#fffeb8">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image HeightRequest="150" WidthRequest="150" Source="Logo.png" Margin="0,40,0,0" HorizontalOptions="Center" />
+            <Label x:Name="lbHome" Text="Seja bem-vindo" TextColor="DarkBlue" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

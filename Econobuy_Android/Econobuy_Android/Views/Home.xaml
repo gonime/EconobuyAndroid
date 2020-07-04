@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Econobuy_Android.Views.Home" IsPresented="false">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="#fffeb8">
+
+            <StackLayout>
+                <Image HeightRequest="150" WidthRequest="150" Source="Logo.png" Margin="0,40,0,0" HorizontalOptions="Center" />
+                <Label Text="ECONOBUY" TextColor="DarkBlue" FontSize="36" FontAttributes="Bold" Margin="0,0,0,20" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btPedidos" Text="Pedidos" Clicked="btPedidos_Clicked"
+							HorizontalOptions="FillAndExpand" BackgroundColor="DarkBlue" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btLogout" Text="Logout" Clicked="btLogout_Clicked"
+							HorizontalOptions="FillAndExpand" BackgroundColor="DarkBlue" TextColor="White"/>
+                </StackLayout>
+
+
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Home" BackgroundColor="#fffeb8">
+            <StackLayout>
+                <Image HeightRequest="150" WidthRequest="150" Source="Logo.png" Margin="0,40,0,0" HorizontalOptions="Center" />
+                <Label x:Name="lbHome" Text="Seja bem-vindo" TextColor="DarkBlue" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

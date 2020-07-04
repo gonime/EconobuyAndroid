@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Econobuy_Android.MainPage"
+             BackgroundColor="#fffeb8"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout Orientation="Vertical" Padding="30" Spacing="20">
+        <StackLayout>
+            <Image HeightRequest="150" WidthRequest="150" Source="Logo.png" HorizontalOptions="Center" />
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ECONOBUY" TextColor="DarkBlue" FontSize="36" FontAttributes="Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" Spacing="10">
+            <Entry x:Name="userEntry" Placeholder="Usuário" Margin="0,0,0,10"
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           TextColor="Black" VerticalOptions="FillAndExpand"/>
+            <Entry x:Name="senhaEntry" Placeholder="Senha" 
+                           PlaceholderColor="DarkGray" HeightRequest="40" 
+                           IsPassword="True"
+                           TextColor="Black" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Label x:Name="loginLB"  Text="" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Red"/>
+        <Button x:Name="loginBtn" Text="Login" TextColor="Black"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#edce00" Clicked="loginBtn_Clicked"/>
+        <Button x:Name="cadastrarBtn" Text="Cadastrar" TextColor="Black"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#edce00" Clicked="cadastrarBtn_Clicked" />
+    </StackLayout>
+
+</ContentPage>
